@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Login Form -->
+  <div id="login-form" class="text-center mt-20">
+    <button id="google-auth-btn" class="btn-primary">Login with Google</button>
+  </div>
+
+  <!-- Menu Container (Initially Hidden) -->
+  <div id="menu-container" class="hidden mt-20">
+    <div id="menu-cards" class="grid grid-cols-3 gap-4">
+      <!-- Menu items will be dynamically inserted here -->
+    </div>
+    <button id="add-menu-btn" class="btn-secondary mt-4">Add Menu Item</button>
+  </div>
+
+  <!-- Add Menu Form (Initially Hidden) -->
+  <div id="menu-form" class="hidden mt-10 p-4 bg-white rounded-lg shadow-md max-w-lg mx-auto">
+    <h2 class="text-lg font-bold mb-4">Add Menu Item</h2>
+    <form>
+      <input type="text" id="menu-title" placeholder="Title" class="input-field" required>
+      <input type="text" id="menu-description" placeholder="Description" class="input-field" required>
+      <input type="number" id="menu-price" placeholder="Price" class="input-field" required>
+      <input type="file" id="menu-image" class="input-field" required>
+      <button type="submit" class="btn-primary mt-4">Add Item</button>
+    </form>
+  </div>
+
+  <!-- Update Menu Form (Initially Hidden) -->
+  <div id="update-menu-form" class="hidden mt-10 p-4 bg-white rounded-lg shadow-md max-w-lg mx-auto">
+    <form>
+      <input type="text" id="update-menu-title" placeholder="Title" class="input-field" required>
+      <input type="text" id="update-menu-description" placeholder="Description" class="input-field" required>
+      <input type="number" id="update-menu-price" placeholder="Price" class="input-field" required>
+      <input type="file" id="update-menu-image" class="input-field">
+      <button type="submit" class="btn-primary">Update Item</button>
+    </form>
+  </div>
+  
+
+  <!-- Logout Button -->
+  <div class="text-center mt-4">
+    <button id="logout-btn" class="btn-danger hidden">Logout</button>
+  </div>
+
+  <!-- Firebase App -->
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
